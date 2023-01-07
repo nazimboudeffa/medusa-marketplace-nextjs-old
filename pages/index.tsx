@@ -1,16 +1,21 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from '@next/font/google'
-import styles from '../styles/Home.module.css'
-
-const inter = Inter({ subsets: ['latin'] })
+import Head from "next/head";
+import Navbar from "../components/navbar";
+import Hero from "../components/hero";
 
 export default function Home() {
   return (
     <>
-      <h1 className="text-3xl font-bold underline">
-        Hello world!
-      </h1>
-    </>
-  )
+      <Head>
+        <title>Nextly - Free Nextjs & TailwindCSS Landing Page Template</title>
+        <meta
+          name="description"
+          content="Nextly is a free landing page template built with next.js & Tailwind CSS"
+        />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+
+      <Navbar />
+      <Hero />
+      </>
+  );
 }
