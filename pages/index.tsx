@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Nextly - Free Nextjs & TailwindCSS Landing Page Template</title>
+        <title>Medusa Multi-Vendor</title>
         <meta
           name="description"
           content="Medusa Multi-Vendor"
