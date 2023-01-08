@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Disclosure } from "@headlessui/react";
 
 export default function Navbar() {
@@ -19,7 +20,7 @@ export default function Navbar() {
                 <Link href="/">
                   <span className="flex items-center space-x-2 text-2xl font-medium text-indigo-500 dark:text-gray-100">
                     <span>
-                      <img
+                      <Image
                         src="/images/logo.svg"
                         alt="N"
                         width="32"
@@ -91,7 +92,7 @@ export default function Navbar() {
         </div>
 
         <div className="hidden mr-3 space-x-4 lg:flex nav__item">
-          <Link href="/">
+          <Link href="/login">
             <span className="px-6 py-2 text-white bg-indigo-600 rounded-md md:ml-5">
               Sign in
             </span>
