@@ -1,37 +1,39 @@
-import axios from 'axios';
-import { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 export default function Products() {
+  const [data, setData] = useState(null);
+  const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(true);
 
-    const config = {
-        headers: {
-        'Access-Control-Allow-Origin': '*',
-        'Content-Type': 'application/json',
-        }
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const response = await fetch('http://192.168.0.45:9000/store/products');
+        const data = await response.json();
+        setData(data);
+      } catch (error) {
+        setError(error);
+      } finally {
+        setLoading(false);
+      }
     }
 
-    const [products, setProducts] = useState([]);
+    fetchData();
+  }, []);
 
-    const fetchProducts = async () => {
-        const response = await axios.get('http://192.168.0.45:9000/store/products', config);
-        const products = response.data.products;
-        console.log(products);
-        setProducts(products);
-    };
+  if (loading) {
+    return <p>Loading...</p>;
+  }
 
-    return (
-        <>
-        <button onClick={fetchProducts}>Fetch Products</button>
-            {
-            products.map((product: any) => {
-                return (
-                    <div key={product.id}>
-                        {product.title}
-                    </div>
-                )    
-            })
-            }
-        </>
-    )
+  if (error) {
+    return <p>Error: {error.message}</p>;
+  }
 
+  return (
+    <ul>
+      {data.products.map((product) => (
+        <li key={product.id}>{product.title}</li>
+      ))}
+    </ul>
+  );
 }
