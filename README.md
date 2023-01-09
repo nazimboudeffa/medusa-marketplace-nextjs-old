@@ -34,3 +34,17 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## I code on Windows
+
+### In developement
+
+The Medusa server is installed on a VirtualBox Ubuntu 22.04 Desktop, it's why I access the endpoint with the url http://192.168.0.45:3000
+
+The port 3000 is the default port for Next
+
+So you have the change the medusa.config.js file with this port instead of 8000
+
+### In production
+
+TODO
