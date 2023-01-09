@@ -26,12 +26,12 @@ export default function Products() {
             products.map((product: any) => {
                 return (
                     <div key={product.id}>
-                        product.title
+                        {product.title}
                     </div>
                 )    
             })
             }
         </>
     )
-    
+
 }
