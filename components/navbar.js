@@ -1,8 +1,15 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Disclosure } from "@headlessui/react";
+import { useState } from "react";
+import CustomerLogin from "./customer-login";
 
 export default function Navbar() {
+
+  const [showCustomerLogin, setShowCustomerLogin] = useState(false);
+
+  const handleOnClose = () => setShowCustomerLogin(false);
+
   const navigation = [
     "Products",
     "Vendors",
@@ -94,12 +101,19 @@ export default function Navbar() {
         <div className="hidden mr-3 space-x-4 lg:flex nav__item">
           <Link href="/login">
             <span className="px-6 py-2 text-white bg-indigo-600 rounded-md md:ml-5">
-              Sign in
+              Seller sign in
             </span>
           </Link>
+        </div>
 
+        <div 
+          className="relative w-10 h-10 overflow-hidden bg-gray-100 rounded-full dark:bg-gray-600"
+          onClick={()=> setShowCustomerLogin(true)}
+        >
+            <svg className="absolute w-12 h-12 text-gray-400 -left-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path></svg>
         </div>
       </nav>
+      <CustomerLogin onClose={handleOnClose} visible={showCustomerLogin}/>
     </div>
   );
 }
