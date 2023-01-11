@@ -11,7 +11,7 @@ export default function Products() {
         const response = await fetch('http://192.168.0.45:9000/store/products');
         const data = await response.json();
         setData(data);
-      } catch (error) {
+      } catch (error: any) {
         setError(error);
       } finally {
         setLoading(false);
