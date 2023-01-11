@@ -7,7 +7,7 @@ export default function Login() {
             <form>
                 <div class="bg-white py-6 rounded-md px-10 max-w-lg shadow-md">
             
-                    <h1 class="text-center text-lg font-bold text-gray-500">Sign in</h1>
+                    <h1 class="text-center text-lg font-bold text-gray-500">Seller Sign in</h1>
                     <div class="space-y-4 mt-6">
                         {/* 
                         <div class="w-full">
