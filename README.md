@@ -2,7 +2,7 @@
 
 ### In developement
 
-The Medusa server is installed on a VirtualBox Ubuntu 22.04 Desktop, it's why I access the endpoint with the url http://192.168.0.45:3000
+The Medusa server is installed on a VirtualBox Ubuntu 22.04 Desktop, it's why I access the endpoint with the url http://192.168.0.45:9000
 
 The port 3000 is the default port for Next
 
