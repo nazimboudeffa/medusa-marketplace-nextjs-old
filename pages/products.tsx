@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 export default function Products() {
-  const [data, setData] = useState(null);
+  const [data, setData] = useState<any>(null);
   const [error, setError] = useState<any>(null);
   const [loading, setLoading] = useState(true);
 
@@ -33,7 +33,7 @@ export default function Products() {
     if (data === null) {
       return (<span>No data available</span>)
     } else {
-      return (data.products.map((product) => (
+      return (data.products.map((product: any) => (
         <li key={product.id}>{product.title}</li>
       )))
     }
