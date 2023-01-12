@@ -29,11 +29,19 @@ export default function Products() {
     return <p>Error: {error.message}</p>;
   }
 
+  const displayProducts = () => {
+    if (data === null) {
+      return (<span>No data available</span>)
+    } else {
+      return (data.products.map((product) => (
+        <li key={product.id}>{product.title}</li>
+      )))
+    }
+  }
+
   return (
     <ul>
-      {data.products.map((product) => (
-        <li key={product.id}>{product.title}</li>
-      ))}
+      {displayProducts()}
     </ul>
   );
 }
