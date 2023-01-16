@@ -71,9 +71,9 @@ export default function Navbar() {
                         </span>
                       </Link>
                     ))}
-                    <Link href="/">
+                    <Link href="/login">
                       <span className="w-full px-6 py-2 mt-3 text-center text-white bg-indigo-600 rounded-md lg:ml-5">
-                        Get Started
+                        Seller sign in
                       </span>
                     </Link>
                   </>
@@ -98,7 +98,7 @@ export default function Navbar() {
           </ul>
         </div>
 
-        <div className="hidden mr-3 space-x-4 lg:flex nav__item">
+        <div className="hidden mr-1 lg:flex">
           <Link href="/login">
             <span className="px-6 py-2 text-white bg-indigo-600 rounded-md md:ml-5">
               Seller sign in
@@ -106,11 +106,26 @@ export default function Navbar() {
           </Link>
         </div>
 
-        <div 
-          className="relative w-10 h-10 overflow-hidden bg-gray-100 rounded-full dark:bg-gray-600"
-          onClick={()=> setShowCustomerLogin(true)}
-        >
-            <svg className="absolute w-12 h-12 text-gray-400 -left-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path></svg>
+        <div className="flex items-center justify-between lg:justify-between">
+              
+          <div 
+            className="w-8 h-8 bg-gray-100 rounded-full dark:bg-gray-600 mx-1"
+          >
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-8 h-8">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+              </svg>
+          </div>
+          
+          <div 
+            className="w-8 h-8 bg-gray-100 rounded-full dark:bg-gray-600 mx-1"
+            onClick={()=> setShowCustomerLogin(true)}
+          >
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-8 h-8">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+
+          </div>
+
         </div>
       </nav>
       <CustomerLogin onClose={handleOnClose} visible={showCustomerLogin}/>
