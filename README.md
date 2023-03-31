@@ -1,7 +1,5 @@
 ## I code on Windows
 
-This project will be called SOON **medusa-marketplace-nextjs**
-
 ### In developement
 
 The Medusa server is installed on a VirtualBox Ubuntu 22.04 Desktop, it's why I access the endpoint with the url http://192.168.0.45:9000
