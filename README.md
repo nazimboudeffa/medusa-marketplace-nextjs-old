@@ -1,6 +1,6 @@
 ## I code on Windows
 
-This project will be called **medusa-marketplace-nextjs** SOON
+This project will be called SOON **medusa-marketplace-nextjs**
 
 ### In developement
 
