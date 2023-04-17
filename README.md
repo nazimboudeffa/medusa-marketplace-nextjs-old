@@ -17,8 +17,8 @@ TODO
 First, run the development server:
 
 ```bash
-git clone <nextjs-marketplace-medusa>
-cd nextjs-marketplace-medusa
+git clone <medusa-marketplace-nextjs>
+cd medusa-marketplace-nextjs
 npm install
 npm run dev
 ```
