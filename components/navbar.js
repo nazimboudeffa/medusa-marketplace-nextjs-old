@@ -26,7 +26,7 @@ export default function Navbar() {
                   width="32"
                   height="32"
             />
-            <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">ACME</span>
+            <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Medusa Multi-Vendor</span>
         </Link>
         <button className="md:hidden" onClick={handleToggle}>
           {toggle ? <AiOutlineClose size={30} /> : <AiOutlineMenu size={30} />}

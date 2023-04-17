@@ -18,12 +18,12 @@ export default function Hero() {
 
             <div className="flex flex-col items-start space-y-3 sm:space-x-4 sm:space-y-0 sm:items-center sm:flex-row">
               <Link
-                href="https://github.com/nazimboudeffa/nextjs-marketplace-medusa/"
+                href="#"
                 className="px-8 py-4 text-lg font-medium text-center text-white bg-indigo-600 rounded-md ">
                 Start selling
               </Link>
               <Link
-                href="https://github.com/nazimboudeffa/nextjs-marketplace-medusa/"
+                href="https://github.com/nazimboudeffa/medusa-marketplace-nextjs"
                 className="flex items-center space-x-2 text-gray-500 dark:text-gray-400">
                 <svg
                   role="img"
